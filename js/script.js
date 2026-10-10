@@ -1,9 +1,9 @@
 let currentPin = "";
-const correctPin = "111007"; // Your secret PIN here
+const correctPin = "1110"; // Your secret PIN here
 
 // Keypad Logic
 function pressNum(num) {
-    if (currentPin.length < 6) {
+    if (currentPin.length < 4) {
         currentPin += num;
         updateDisplay();
     }
@@ -15,7 +15,7 @@ function clearPin() {
 }
 
 function updateDisplay() {
-    let display = currentPin.padEnd(6, '_');
+    let display = currentPin.padEnd(4, '_');
     document.getElementById('pin-display').innerText = display;
 }
 
